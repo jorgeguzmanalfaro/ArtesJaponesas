@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kyusho Jutsu Evolutivo — KJE Academy · Santiago, Chile</title>
+<meta name="description" content="KJE Academy: Kyusho Jutsu, Defensa Personal y Fitness de Combate en Santiago de Chile, con el Master Instructor Alejandro Sepúlveda C.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sumi:#16191C; --sumi-2:#1F2327; --line:#33393F;
+  --washi:#F4F0E8; --washi-2:#EAE4D8; --muted:#B4B0A6;
+  --beni:#C8372D; --beni-ink:#A8402B;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--sumi);color:var(--washi);font-family:'Zen Kaku Gothic New',system-ui,sans-serif;font-size:17px;line-height:1.75}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.serif{font-family:'Shippori Mincho',serif;font-weight:500}
+.eyebrow{margin:0 0 16px;font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--beni)}
+h1,h2,h3{margin:0;font-family:'Shippori Mincho',serif;font-weight:500;line-height:1.15}
+h2{font-size:clamp(32px,4vw,44px)}
+section{padding:112px 0}
+
+/* nav */
+header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(22,25,28,.94);backdrop-filter:blur(6px);z-index:10}
+nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding:16px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand b{font-family:'Shippori Mincho',serif;font-size:22px;letter-spacing:.06em}
+.brand span{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;align-items:center;gap:4px 26px;font-size:15px}
+.links a{text-decoration:none;padding:10px 0;color:var(--washi)}
+.links a:hover{color:var(--beni)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 28px;border-radius:2px;text-decoration:none;font-size:15px;letter-spacing:.06em;transition:background .2s,color .2s}
+.btn-red{background:var(--beni);color:#fff}
+.btn-red:hover{background:#A92C23}
+.btn-line{border:1px solid var(--washi);color:var(--washi)}
+.btn-line:hover{background:var(--washi);color:var(--sumi)}
+.links .btn{min-height:42px;padding:0 18px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:120px 0 140px}
+.hero .sand{position:absolute;right:-200px;top:-80px;width:860px;height:860px;opacity:.5;pointer-events:none}
+.hero .inner{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:56px}
+.hero .text{flex:999 1 520px;min-width:0}
+.hero h1{font-size:clamp(44px,7vw,88px);line-height:1.05}
+.hero h1 em{font-style:normal;color:var(--beni)}
+.hero p.lead{margin:28px 0 0;max-width:34rem;font-size:19px;color:#D6D1C6}
+.hero .ctas{margin-top:40px;display:flex;flex-wrap:wrap;gap:16px}
+.hero .mark{flex:1 1 220px;display:flex;justify-content:center}
+.hero .mark svg{width:min(300px,70vw);height:auto}
+.place{margin-top:28px;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+
+/* academia */
+.academia{background:var(--washi);color:#1E2421}
+.academia .eyebrow{color:var(--beni-ink)}
+.two{display:flex;flex-wrap:wrap;gap:64px}
+.two>.a{flex:1 1 320px}
+.two>.b{flex:2 1 480px;min-width:0;display:flex;flex-direction:column;gap:20px;font-size:18px;color:#353A34}
+.two>.b p{margin:0}
+.kanji-big{margin:20px 0 0;font-family:'Shippori Mincho',serif;font-size:64px;line-height:1;color:#CFC6B4}
+
+/* programas */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:56px}
+.card{background:var(--sumi-2);border:1px solid var(--line);border-radius:2px;padding:40px 34px;display:flex;flex-direction:column;gap:6px}
+.card .k{font-family:'Shippori Mincho',serif;font-size:44px;line-height:1.1;color:var(--beni)}
+.card h3{margin-top:18px;font-size:26px}
+.card .sub{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.card p{margin:0;color:#D6D1C6}
+
+/* instructor */
+.instructor{background:var(--washi-2);color:#1E2421}
+.instructor .eyebrow{color:var(--beni-ink)}
+.inst{display:flex;flex-wrap:wrap;gap:56px;align-items:center}
+.inst .photo{flex:0 1 320px;aspect-ratio:4/5;background:#DCD5C7;border-radius:2px;display:flex;align-items:center;justify-content:center;color:#5A5F58;font-size:14px;letter-spacing:.1em;text-align:center;padding:24px}
+.inst .txt{flex:1 1 380px;min-width:0}
+.inst .role{margin:12px 0 24px;font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:#5A5F58}
+.inst p{margin:0 0 16px;color:#353A34;font-size:18px}
+.inst a.ig{color:var(--beni-ink);font-weight:500}
+
+/* valores */
+.vals{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;margin-top:56px}
+.val{border-top:2px solid var(--beni);padding-top:22px}
+.val .k{font-family:'Shippori Mincho',serif;font-size:34px;color:var(--beni);line-height:1.2}
+.val h3{font-size:21px;margin:6px 0 8px}
+.val p{margin:0;color:#D6D1C6}
+
+/* cita */
+.quote{border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+.quote p.q{margin:0 auto;max-width:820px;font-family:'Shippori Mincho',serif;font-size:clamp(26px,3.4vw,38px);line-height:1.5}
+.quote p.s{margin:24px 0 0;font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+
+/* contacto */
+.contacto{background:var(--washi);color:#1E2421}
+.contacto .eyebrow{color:var(--beni-ink)}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:12px 24px;font-size:16px}
+dt{color:#5A5F58} dd{margin:0}
+.contacto .box{flex:1 1 380px;background:#fff;border:1px solid #DCD5C7;border-radius:2px;padding:40px;display:flex;flex-direction:column;gap:18px}
+.contacto .box p{margin:0;color:#353A34}
+.contacto .btn-dark{background:#1E2421;color:var(--washi)}
+.contacto .btn-dark:hover{background:var(--beni)}
+
+footer{padding:36px 0;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer a{color:var(--washi)}
+footer a:hover{color:var(--beni)}
+
+@media (max-width:640px){
+  section{padding:80px 0}
+  .hero{padding:72px 0 96px}
+  .wrap{padding:0 20px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav aria-label="Principal">
+      <a class="brand" href="#inicio">
+        <b>KJE</b><span>Kyusho Jutsu Evolutivo</span>
+      </a>
+      <div class="links">
+        <a href="#academia">Academia</a>
+        <a href="#programas">Programas</a>
+        <a href="#instructor">Instructor</a>
+        <a href="#contacto">Contacto</a>
+        <a class="btn btn-red" href="https://www.instagram.com/kyushojutsuevolutivo/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section id="inicio" class="hero">
+  <svg class="sand" aria-hidden="true" viewBox="0 0 800 800">
+    <g fill="none" stroke="#2C3238" stroke-width="1.4">
+      <circle cx="400" cy="400" r="140"/><circle cx="400" cy="400" r="175"/><circle cx="400" cy="400" r="210"/><circle cx="400" cy="400" r="245"/><circle cx="400" cy="400" r="280"/><circle cx="400" cy="400" r="315"/><circle cx="400" cy="400" r="350"/><circle cx="400" cy="400" r="385"/>
+    </g>
+  </svg>
+  <div class="wrap inner">
+    <div class="text">
+      <p class="eyebrow">KJE Academy · Artes marciales</p>
+      <h1>Kyusho Jutsu<br><em>Evolutivo</em></h1>
+      <p class="lead">Artes marciales y defensa personal basadas en la precisión. Entrena Kyusho Jutsu, Defensa Personal y Fitness de Combate con el Master Instructor Alejandro Sepúlveda C.</p>
+      <div class="ctas">
+        <a class="btn btn-red" href="#contacto">Quiero entrenar</a>
+        <a class="btn btn-line" href="#programas">Ver programas</a>
+      </div>
+      <p class="place">Santiago · Chile</p>
+    </div>
+    <div class="mark">
+      <!-- Ensō con los kanji de Kyusho -->
+      <svg viewBox="0 0 200 200" role="img" aria-label="Ensō con los kanji 急所 (kyūsho)">
+        <circle cx="100" cy="100" r="80" fill="#1F2327"/>
+        <path d="M112 22 A78 78 0 1 1 50 40" fill="none" stroke="#C8372D" stroke-width="11" stroke-linecap="round"/>
+        <text x="100" y="94" text-anchor="middle" font-family="Shippori Mincho, serif" font-size="40" fill="#F4F0E8">急</text>
+        <text x="100" y="140" text-anchor="middle" font-family="Shippori Mincho, serif" font-size="40" fill="#F4F0E8">所</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="academia" class="academia">
+  <div class="wrap two">
+    <div class="a">
+      <p class="eyebrow">一 · La academia</p>
+      <h2>KJE Academy</h2>
+      <p class="kanji-big" lang="ja">急所術</p>
+    </div>
+    <div class="b">
+      <p>El <strong>Kyusho Jutsu</strong> es el arte japonés de los puntos vitales: el estudio de las zonas más sensibles del cuerpo humano para controlar y neutralizar con precisión, no con fuerza.</p>
+      <p>En KJE Academy lo llevamos a un enfoque <strong>evolutivo</strong>: tradición marcial aplicada a la defensa personal real y complementada con preparación física de combate.</p>
+    </div>
+  </div>
+</section>
+
+<section id="programas">
+  <div class="wrap">
+    <p class="eyebrow">二 · Programas</p>
+    <h2>Qué entrenamos</h2>
+    <div class="cards">
+      <article class="card">
+        <span class="k" lang="ja">急所</span>
+        <h3>Kyusho Jutsu</h3>
+        <span class="sub">Puntos vitales</span>
+        <p>Ubicación y uso de los puntos sensibles del cuerpo para controlar al oponente con técnica y precisión.</p>
+      </article>
+      <article class="card">
+        <span class="k" lang="ja">護身</span>
+        <h3>Defensa Personal</h3>
+        <span class="sub">Goshin</span>
+        <p>Respuestas simples y efectivas ante situaciones reales, para cualquier edad y complexión.</p>
+      </article>
+      <article class="card">
+        <span class="k" lang="ja">体力</span>
+        <h3>Fitness de Combate</h3>
+        <span class="sub">Preparación física</span>
+        <p>Entrenamiento de fuerza, resistencia y coordinación basado en movimientos de las artes marciales.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="instructor" class="instructor">
+  <div class="wrap inst">
+    <div class="photo">[FOTO DEL INSTRUCTOR]</div>
+    <div class="txt">
+      <p class="eyebrow">三 · Instructor</p>
+      <h2>Alejandro Sepúlveda C.</h2>
+      <p class="role">Master Instructor · KJE Academy</p>
+      <p>[BREVE RESEÑA DEL INSTRUCTOR: trayectoria, grados y años de práctica.]</p>
+      <p>Síguelo en Instagram: <a class="ig" href="https://www.instagram.com/alejandro.sepulveda.c/" target="_blank" rel="noopener">@alejandro.sepulveda.c</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="valores">
+  <div class="wrap">
+    <p class="eyebrow">四 · Valores</p>
+    <h2>El camino del dojo</h2>
+    <div class="vals">
+      <div class="val"><div class="k" lang="ja">礼</div><h3>Respeto</h3><p>Por el instructor, el compañero y el espacio de entrenamiento.</p></div>
+      <div class="val"><div class="k" lang="ja">正</div><h3>Precisión</h3><p>La técnica correcta vale más que la fuerza.</p></div>
+      <div class="val"><div class="k" lang="ja">進</div><h3>Evolución</h3><p>Mejorar un poco en cada clase.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="wrap">
+    <p class="q">«No la fuerza, sino el lugar exacto.»</p>
+    <p class="s">Kyusho Jutsu Evolutivo</p>
+  </div>
+</section>
+
+<section id="contacto" class="contacto">
+  <div class="wrap two">
+    <div class="a">
+      <p class="eyebrow">五 · Contacto</p>
+      <h2>Entrena con nosotros</h2>
+      <p style="margin:24px 0 32px;color:#353A34;max-width:26rem">No necesitas experiencia previa. Escríbenos por Instagram y te contamos horarios y cómo empezar.</p>
+      <dl>
+        <dt>Ciudad</dt><dd>Santiago, Chile</dd>
+        <dt>Dojo</dt><dd>[DIRECCIÓN DEL DOJO]</dd>
+        <dt>Horario</dt><dd>[DÍAS Y HORAS]</dd>
+        <dt>Instagram</dt><dd><a href="https://www.instagram.com/kyushojutsuevolutivo/" target="_blank" rel="noopener">@kyushojutsuevolutivo</a></dd>
+      </dl>
+    </div>
+    <div class="box">
+      <h3 style="font-size:26px">Clase de prueba</h3>
+      <p>Envíanos un mensaje directo con tu nombre y la disciplina que te interesa: Kyusho Jutsu, Defensa Personal o Fitness de Combate.</p>
+      <a class="btn btn-dark" href="https://ig.me/m/kyushojutsuevolutivo" target="_blank" rel="noopener">Enviar mensaje por Instagram</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>KJE Academy · Kyusho Jutsu Evolutivo · Santiago, Chile</span>
+    <span><a href="index.html">← Artes Japonesas</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
