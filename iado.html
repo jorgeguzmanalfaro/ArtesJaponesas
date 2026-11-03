@@ -22,7 +22,7 @@ a{color:inherit}
 .eyebrow{margin:0 0 16px;font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--beni)}
 h1,h2,h3{margin:0;font-family:'Shippori Mincho',serif;font-weight:500;line-height:1.15}
 h2{font-size:clamp(32px,4vw,44px)}
-section{padding:112px 0}
+section{padding:112px 0;scroll-margin-top:72px}
 
 /* nav */
 header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(22,25,28,.94);backdrop-filter:blur(6px);z-index:10}
@@ -125,6 +125,32 @@ footer a:hover{color:var(--beni)}
 .oath{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
 .oath li{border:1px solid var(--line);padding:24px 26px;color:#D6D1C6;border-radius:2px}
 .oath li b{display:block;font-family:'Shippori Mincho',serif;font-weight:500;color:var(--beni);font-size:15px;letter-spacing:.2em;margin-bottom:6px}
+
+/* katas */
+.katas{background:var(--washi);color:#1E2421}
+.katas .eyebrow{color:var(--beni-ink)}
+.katas .intro{margin:24px 0 0;max-width:46rem;color:#353A34;font-size:18px}
+.series{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:56px;align-items:stretch}
+.serie{background:#fff;border:1px solid #DCD5C7;border-top:3px solid var(--beni);border-radius:2px;padding:36px 32px;display:flex;flex-direction:column}
+.serie .num{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:#5A5F58}
+.serie .k{margin-top:14px;font-family:'Shippori Mincho',serif;font-size:38px;line-height:1.15;color:var(--beni-ink)}
+.serie h3{margin-top:10px;font-size:25px}
+.serie .sub{margin-top:6px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#5A5F58}
+.serie .desc{margin:16px 0 0;color:#353A34;font-size:16px}
+.serie ol{list-style:none;counter-reset:k;margin:24px 0 0;padding:0}
+.serie ol li{counter-increment:k;display:flex;gap:14px;padding:13px 0;border-top:1px solid #E6DFD1;font-size:16px;line-height:1.45}
+.serie ol li::before{content:counter(k,decimal-leading-zero);flex:0 0 26px;font-family:'Shippori Mincho',serif;color:var(--beni-ink);font-size:15px;padding-top:1px}
+.serie ol li b{display:block;font-weight:500;color:#1E2421}
+.serie ol li small{display:block;font-size:14px;color:#6A6E66;margin-top:2px}
+.serie.gokui{background:var(--sumi);border-color:var(--sumi);border-top-color:var(--beni);color:var(--washi)}
+.serie.gokui .num,.serie.gokui .sub{color:var(--muted)}
+.serie.gokui .k{color:var(--beni)}
+.serie.gokui .desc{color:#D6D1C6}
+.serie.gokui ol li{border-top-color:var(--line)}
+.serie.gokui ol li::before{color:var(--beni)}
+.serie.gokui ol li b{color:var(--washi)}
+.serie.gokui ol li small{color:var(--muted)}
+.serie .tag{align-self:flex-start;margin-top:14px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;border:1px solid var(--beni);color:var(--beni);padding:4px 10px;border-radius:2px}
 </style>
 </head>
 <body>
@@ -138,6 +164,7 @@ footer a:hover{color:var(--beni)}
       <div class="links">
         <a href="#escuela">La escuela</a>
         <a href="#iai">El Iai</a>
+        <a href="#katas">Katas</a>
         <a href="#curriculo">Currículo</a>
         <a href="#historia">Historia</a>
         <a class="btn btn-red" href="#saber-mas">Saber más</a>
@@ -199,14 +226,68 @@ footer a:hover{color:var(--beni)}
     </div>
     <div class="b" style="color:#D6D1C6">
       <p>Dentro de Katori Shintō-ryū, el <strong style="color:#F4F0E8">iaijutsu</strong> (también llamado battōjutsu) entrena a sacar la espada y cortar en un solo movimiento, tanto en situaciones de campo de batalla como en un enfrentamiento cotidiano.</p>
-      <p>Se aprende a través de dos series de katas: <strong style="color:#F4F0E8">Omote no Iai</strong>, practicada desde la posición sentada, y <strong style="color:#F4F0E8">Tachiai Battōjutsu</strong>, de pie. Ambas preparan el cuerpo y la mente para el trabajo con la espada en pareja.</p>
+      <p>Se aprende a través de dos series de katas: <strong style="color:#F4F0E8">Omote no Iai</strong>, practicada desde la posición sentada, y <strong style="color:#F4F0E8">Tachiai Battōjutsu</strong>, de pie. Ambas preparan el cuerpo y la mente para el trabajo con la espada en pareja. Más adelante, los estudiantes avanzados acceden a las formas secretas del <strong style="color:#F4F0E8">Gokui no Iai</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="katas" class="katas">
+  <div class="wrap">
+    <p class="eyebrow">三 · Las katas</p>
+    <h2>Las tres series del Iai</h2>
+    <p class="intro">El iai se estudia en tres niveles: de las formas básicas sentadas, a las técnicas de pie y en movimiento, hasta las formas secretas reservadas a los estudiantes avanzados.</p>
+    <div class="series">
+      <article class="serie">
+        <span class="num">Serie 1 · 6 katas</span>
+        <span class="k" lang="ja">表之居合</span>
+        <h3>Omote no Iai</h3>
+        <span class="sub">Formas básicas · Suwari Iai</span>
+        <p class="desc">Las formas superficiales o básicas, ejecutadas generalmente desde la posición sentada.</p>
+        <ol>
+          <li><span><b>Kusanagi no Ken</b><small>Espada que siega la hierba</small></span></li>
+          <li><span><b>Nuki Tsuke no Ken</b><small>Espada de extracción rápida</small></span></li>
+          <li><span><b>Nuki Uchi no Ken</b><small>Espada de extracción y corte</small></span></li>
+          <li><span><b>U-ken</b><small>Espada derecha</small></span></li>
+          <li><span><b>Sa-ken</b><small>Espada izquierda</small></span></li>
+          <li><span><b>Happō Ken</b><small>Espada de las ocho direcciones</small></span></li>
+        </ol>
+      </article>
+      <article class="serie">
+        <span class="num">Serie 2 · 5 katas</span>
+        <span class="k" lang="ja">立合抜刀術</span>
+        <h3>Tachiai Battōjutsu</h3>
+        <span class="sub">Formas de pie</span>
+        <p class="desc">Técnicas de desenvaine y corte ejecutadas en posición erguida o en movimiento.</p>
+        <ol>
+          <li><span><b>Yuki Ai Gyaku Nuki no Tachi</b></span></li>
+          <li><span><b>Zengo Chidori no Tachi</b></span></li>
+          <li><span><b>Yuki Ai Migi Chidori no Tachi</b></span></li>
+          <li><span><b>Gyaku Nuki no Tachi</b></span></li>
+          <li><span><b>Nuki Uchi no Tachi</b></span></li>
+        </ol>
+      </article>
+      <article class="serie gokui">
+        <span class="num">Serie 3 · 5 katas</span>
+        <span class="k" lang="ja">極意之居合</span>
+        <h3>Gokui no Iai</h3>
+        <span class="sub">Formas secretas · avanzadas</span>
+        <p class="desc">Las técnicas más avanzadas y tradicionales de la escuela.</p>
+        <span class="tag">Estudiantes avanzados</span>
+        <ol>
+          <li><span><b>Kumo Giri no Tachi</b><small>Espada que corta la nube</small></span></li>
+          <li><span><b>Hangetsu no Tachi</b><small>Espada de media luna</small></span></li>
+          <li><span><b>Mui Ichi no Ken</b><small>Espada de «no uno»</small></span></li>
+          <li><span><b>Mu Ni no Ken</b><small>Espada de «no dos»</small></span></li>
+          <li><span><b>Seigan no Ken</b><small>Espada del ojo central</small></span></li>
+        </ol>
+      </article>
     </div>
   </div>
 </section>
 
 <section id="curriculo" style="border-top:1px solid var(--line)">
   <div class="wrap">
-    <p class="eyebrow">三 · Currículo</p>
+    <p class="eyebrow">四 · Currículo</p>
     <h2>Un sistema completo</h2>
     <div class="cards curr">
       <article class="card"><span class="k" lang="ja">剣術</span><h3>Kenjutsu</h3><span class="sub">Espada</span><p>El núcleo de la escuela.</p></article>
@@ -225,7 +306,7 @@ footer a:hover{color:var(--beni)}
 <section id="historia" class="academia">
   <div class="wrap two">
     <div class="a">
-      <p class="eyebrow">四 · Historia</p>
+      <p class="eyebrow">五 · Historia</p>
       <h2>Casi seis siglos de tradición</h2>
     </div>
     <ol class="tl b">
@@ -239,7 +320,7 @@ footer a:hover{color:var(--beni)}
 
 <section id="keppan">
   <div class="wrap">
-    <p class="eyebrow">五 · El juramento</p>
+    <p class="eyebrow">六 · El juramento</p>
     <h2>Keppan, el compromiso de sangre</h2>
     <p style="margin:24px 0 0;max-width:46rem;color:#D6D1C6">Tradicionalmente, quien ingresaba a la escuela firmaba con su propia sangre un juramento de conducta. Entre sus compromisos:</p>
     <ul class="oath">
@@ -261,7 +342,7 @@ footer a:hover{color:var(--beni)}
 <section id="saber-mas" class="contacto">
   <div class="wrap two">
     <div class="a">
-      <p class="eyebrow">六 · Saber más</p>
+      <p class="eyebrow">七 · Saber más</p>
       <h2>Practicar el camino</h2>
       <p style="margin:24px 0 0;color:#353A34;max-width:28rem">Katori Shintō-ryū se aprende solo con instructores autorizados por la escuela. Para conocer sus sedes y su historia, consulta las fuentes oficiales.</p>
     </div>
