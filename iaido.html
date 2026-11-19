@@ -167,94 +167,6 @@ footer a:hover{color:var(--beni)}
 .lightbox[hidden]{display:none}
 .lightbox img{max-width:100%;max-height:100%;background:#fff;border-radius:2px}
 .lightbox .close{position:absolute;top:14px;right:22px;all:unset;position:absolute;top:10px;right:20px;cursor:pointer;color:var(--washi);font-size:42px;line-height:1}
-/* videos */
-.videos .intro{margin:24px 0 0;max-width:46rem;color:#D6D1C6;font-size:18px}
-.vgrid{display:grid;grid-template-columns:minmax(0,2fr) minmax(260px,1fr);gap:24px;margin-top:48px;align-items:start}
-@media (max-width:900px){.vgrid{grid-template-columns:1fr}}
-.player{position:relative;width:100%;aspect-ratio:16/9;background:#000;border:1px solid var(--line);border-top:3px solid var(--beni);border-radius:2px;overflow:hidden}
-.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.localmsg{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:18px;padding:32px;background:var(--sumi-2)}
-.localmsg[hidden]{display:none}
-.localmsg p{margin:0;color:#D6D1C6;font-size:16px;max-width:36rem}
-.localmsg b{color:var(--washi)}
-.vlist{list-style:none;margin:0;padding:0;max-height:min(70vh,560px);overflow:auto;border:1px solid var(--line);border-radius:2px}
-.vlist button{all:unset;box-sizing:border-box;cursor:pointer;display:flex;gap:12px;align-items:center;width:100%;padding:10px 12px;border-bottom:1px solid var(--line);font-size:15px;line-height:1.35;color:#D6D1C6}
-.vlist button:hover{background:var(--sumi-2);color:var(--washi)}
-.vlist button.on{background:var(--sumi-2);color:var(--washi);box-shadow:inset 3px 0 0 var(--beni)}
-.vlist img{flex:0 0 96px;width:96px;aspect-ratio:16/9;object-fit:cover;border-radius:2px;background:#000}
-.vlist small{display:block;font-family:'Shippori Mincho',serif;color:var(--beni);font-size:13px}
-.vlist button:focus-visible{outline:2px solid var(--beni);outline-offset:-2px}
-.videos .note{margin:18px 0 0;font-size:14px;color:var(--muted)}
-.videos .note a{color:var(--beni)}
-
-/* práctica: tabs swari / tachi */
-.practica{background:var(--sumi);border-top:1px solid var(--line)}
-.practica .intro{margin:24px 0 0;max-width:46rem;color:#D6D1C6;font-size:18px}
-.tabs{display:flex;flex-wrap:wrap;gap:0;margin-top:48px;border-bottom:1px solid var(--line)}
-.tab{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:baseline;gap:14px;padding:18px 28px 16px;border:1px solid transparent;border-bottom:none;color:var(--muted);font-size:16px;letter-spacing:.08em;margin-bottom:-1px}
-.tab .k{font-family:'Shippori Mincho',serif;font-size:30px;color:var(--muted)}
-.tab small{font-size:12px;letter-spacing:.2em;text-transform:uppercase}
-.tab:hover{color:var(--washi)}
-.tab[aria-selected=true]{color:var(--washi);border-color:var(--line);border-top:3px solid var(--beni);background:var(--sumi-2)}
-.tab[aria-selected=true] .k{color:var(--beni)}
-.tab:focus-visible{outline:2px solid var(--beni);outline-offset:-2px}
-.tpanel{background:var(--sumi-2);border:1px solid var(--line);border-top:none;padding:32px}
-.tpanel[hidden]{display:none}
-.tpanel .sintro{margin:0;color:#D6D1C6;max-width:52rem}
-.tpanel .sintro b{color:var(--washi);font-weight:500}
-.kpills{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 28px}
-.kpill{all:unset;box-sizing:border-box;cursor:pointer;padding:9px 16px;border:1px solid var(--line);border-radius:2px;font-size:15px;color:#D6D1C6;background:var(--sumi)}
-.kpill small{font-family:'Shippori Mincho',serif;color:var(--beni);margin-right:8px}
-.kpill:hover{border-color:var(--muted);color:var(--washi)}
-.kpill.on{border-color:var(--beni);color:var(--washi);box-shadow:inset 0 -3px 0 var(--beni)}
-.kpill:focus-visible{outline:2px solid var(--beni)}
-.kata[hidden]{display:none}
-.khead{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,1fr);gap:28px;align-items:start}
-@media (max-width:900px){.khead{grid-template-columns:1fr}}
-.vbox{background:#000;border:1px solid var(--line);border-top:3px solid var(--beni);border-radius:2px}
-.viewer .big{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#000}
-.vcap{display:flex;align-items:baseline;gap:12px;padding:12px 14px 4px;background:var(--sumi)}
-.vcap .vn{font-family:'Shippori Mincho',serif;color:var(--beni);font-size:22px}
-.vcap .vt{flex:1;font-family:'Shippori Mincho',serif;color:var(--washi);font-size:18px}
-.vcap .vtime{font-size:13px;color:var(--muted)}
-.vctl{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:8px 14px 14px;background:var(--sumi)}
-.vctl button{all:unset;cursor:pointer;font-size:14px;color:var(--washi);border:1px solid var(--line);padding:6px 12px;border-radius:2px}
-.vctl button:hover,.vctl button.on{border-color:var(--beni);color:var(--beni)}
-.vctl .dlink{margin-left:auto;font-size:13px;color:var(--beni);text-decoration:none}
-.vctl .dlink:hover{text-decoration:underline}
-.kinfo .num{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
-.kinfo h3{font-size:34px;margin-top:8px}
-.kinfo .trad{margin-top:6px;color:var(--beni);font-family:'Shippori Mincho',serif;font-size:18px}
-.kinfo p{margin:16px 0 0;color:#D6D1C6;font-size:16px}
-.kinfo .meta{margin-top:18px;font-size:13px;color:var(--muted);letter-spacing:.06em}
-.legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:18px;font-size:12px;color:var(--muted)}
-.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
-.seqh{margin:36px 0 12px;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
-.timeline{position:relative;height:10px;background:var(--sumi);border:1px solid var(--line);border-radius:2px;margin-bottom:12px;overflow:hidden}
-.timeline span{position:absolute;top:0;bottom:0}
-.timeline .head{position:absolute;top:-2px;bottom:-2px;width:2px;background:var(--washi);left:0;transition:left .2s linear}
-.strip{display:flex;gap:10px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x proximity}
-.fr{all:unset;box-sizing:border-box;cursor:pointer;flex:0 0 168px;scroll-snap-align:start;background:var(--sumi);border:1px solid var(--line);border-radius:2px;overflow:hidden;position:relative}
-.fr img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#000}
-.fr .bar{height:4px}
-.fr .cap{display:block;padding:6px 8px 8px;font-size:12.5px;line-height:1.3;color:#D6D1C6}
-.fr .cap b{display:block;font-family:'Shippori Mincho',serif;color:var(--beni);font-weight:500;font-size:12px}
-.fr:hover{border-color:var(--muted)}
-.fr.on{border-color:var(--beni);box-shadow:0 0 0 1px var(--beni)}
-.fr:focus-visible{outline:2px solid var(--beni)}
-.steps{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:14px}
-.step{display:grid;grid-template-columns:240px minmax(0,1fr);gap:20px;background:var(--sumi);border:1px solid var(--line);border-left:4px solid var(--c);border-radius:2px;padding:14px;scroll-margin-top:90px}
-@media (max-width:640px){.step{grid-template-columns:1fr}.tpanel{padding:20px}}
-.step img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:2px;background:#000;cursor:pointer}
-.step .n{font-family:'Shippori Mincho',serif;color:var(--beni);font-size:26px;line-height:1}
-.step h4{margin:6px 0 4px;font-size:19px;font-weight:500;font-family:'Shippori Mincho',serif;color:var(--washi)}
-.step p{margin:6px 0 0;color:#D6D1C6;font-size:15.5px;line-height:1.6}
-.step .row{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
-.step .ph{font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:2px 8px;border-radius:2px;color:#fff;background:var(--c)}
-.step .go{all:unset;cursor:pointer;font-size:13px;color:var(--washi);border:1px solid var(--line);padding:2px 10px;border-radius:2px}
-.step .go:hover{border-color:var(--beni);color:var(--beni)}
-.step.on{border-color:var(--beni);border-left-color:var(--c)}
-.pnote{margin:28px 0 0;font-size:14px;color:var(--muted);max-width:56rem}
 </style>
 </head>
 <body>
@@ -272,7 +184,6 @@ footer a:hover{color:var(--beni)}
         <a href="#katas">Katas</a>
         <a href="#swari">Swari Waza</a>
         <a href="#tachi">Tachi Waza</a>
-        <a href="#videos">Videos</a>
         <a href="#curriculo">Currículo</a>
         <a href="#historia">Historia</a>
         <a class="btn btn-red" href="#saber-mas">Saber más</a>
@@ -428,6 +339,7 @@ footer a:hover{color:var(--beni)}
 </section>
 
 
+
 <section id="practica" class="practica">
   <div class="wrap">
     <p class="eyebrow">稽古 · Práctica</p>
@@ -550,53 +462,6 @@ footer a:hover{color:var(--beni)}
   </div>
 </section>
 
-<section id="videos" class="videos">
-  <div class="wrap">
-    <p class="eyebrow">映像 · Videos</p>
-    <h2>Secuencia de videos</h2>
-    <p class="intro">Tokumeikan Training Videos — fundamentos de iaijutsu en 22 videos. Elige un video de la lista o deja que la secuencia avance sola.</p>
-    <div class="vgrid">
-      <div class="player">
-        <iframe id="yt"
-          src="https://www.youtube.com/embed/QSFE8BltBXU?list=PLVLr8JOIOvLewgkL5da125Z0f-fJ20QkX&rel=0&playsinline=1"
-          title="Tokumeikan Training Videos (iaijutsu fundamentals)"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen></iframe>
-        <div class="localmsg" id="localmsg" hidden>
-          <p><b>El video no se puede reproducir con la página abierta como archivo local.</b><br>YouTube exige que la página se vea desde un sitio web (http/https). Publícala en tu servidor o ábrela con un servidor local; mientras tanto, cada video de la lista se abre en YouTube.</p>
-          <a class="btn btn-red" href="https://www.youtube.com/playlist?list=PLVLr8JOIOvLewgkL5da125Z0f-fJ20QkX" target="_blank" rel="noopener">Ver la lista en YouTube</a>
-        </div>
-      </div>
-      <ol class="vlist" id="vlist">
-        <li><button type="button" data-id="QSFE8BltBXU" class="on"><img src="https://i.ytimg.com/vi/QSFE8BltBXU/mqdefault.jpg" alt="" loading="lazy"><span><small>01</small>how to sit</span></button></li>
-        <li><button type="button" data-id="MhIkQE0gCNU"><img src="https://i.ytimg.com/vi/MhIkQE0gCNU/mqdefault.jpg" alt="" loading="lazy"><span><small>02</small>iai-goshi 360</span></button></li>
-        <li><button type="button" data-id="MZbZ7GjwCS8"><img src="https://i.ytimg.com/vi/MZbZ7GjwCS8/mqdefault.jpg" alt="" loading="lazy"><span><small>03</small>how to swivel</span></button></li>
-        <li><button type="button" data-id="65AR_fxODh4"><img src="https://i.ytimg.com/vi/65AR_fxODh4/mqdefault.jpg" alt="" loading="lazy"><span><small>04</small>how to swivel (side view)</span></button></li>
-        <li><button type="button" data-id="lwNG9KEXYSY"><img src="https://i.ytimg.com/vi/lwNG9KEXYSY/mqdefault.jpg" alt="" loading="lazy"><span><small>05</small>iai body movements</span></button></li>
-        <li><button type="button" data-id="aqb2b0SQjbE"><img src="https://i.ytimg.com/vi/aqb2b0SQjbE/mqdefault.jpg" alt="" loading="lazy"><span><small>06</small>iai body movements (side view)</span></button></li>
-        <li><button type="button" data-id="smme3rMIbS8"><img src="https://i.ytimg.com/vi/smme3rMIbS8/mqdefault.jpg" alt="" loading="lazy"><span><small>07</small>first maki-uchi</span></button></li>
-        <li><button type="button" data-id="B2eeYNgD0Uc"><img src="https://i.ytimg.com/vi/B2eeYNgD0Uc/mqdefault.jpg" alt="" loading="lazy"><span><small>08</small>second maki-uchi</span></button></li>
-        <li><button type="button" data-id="FSDzmrA61Ms"><img src="https://i.ytimg.com/vi/FSDzmrA61Ms/mqdefault.jpg" alt="" loading="lazy"><span><small>09</small>two maki-uchis</span></button></li>
-        <li><button type="button" data-id="4STuV6k8S8I"><img src="https://i.ytimg.com/vi/4STuV6k8S8I/mqdefault.jpg" alt="" loading="lazy"><span><small>10</small>yoko-ichimonji</span></button></li>
-        <li><button type="button" data-id="ibPegXE-7Ws"><img src="https://i.ytimg.com/vi/ibPegXE-7Ws/mqdefault.jpg" alt="" loading="lazy"><span><small>11</small>tate-ichimonji</span></button></li>
-        <li><button type="button" data-id="BkJNYiwZ_lQ"><img src="https://i.ytimg.com/vi/BkJNYiwZ_lQ/mqdefault.jpg" alt="" loading="lazy"><span><small>12</small>tate-ichimonji (side view)</span></button></li>
-        <li><button type="button" data-id="6DkjHgPeuP8"><img src="https://i.ytimg.com/vi/6DkjHgPeuP8/mqdefault.jpg" alt="" loading="lazy"><span><small>13</small>to jodan (front view)</span></button></li>
-        <li><button type="button" data-id="mN13rmsxQrU"><img src="https://i.ytimg.com/vi/mN13rmsxQrU/mqdefault.jpg" alt="" loading="lazy"><span><small>14</small>to jodan (side view)</span></button></li>
-        <li><button type="button" data-id="o9kRCg8ZK70"><img src="https://i.ytimg.com/vi/o9kRCg8ZK70/mqdefault.jpg" alt="" loading="lazy"><span><small>15</small>final cut (front view)</span></button></li>
-        <li><button type="button" data-id="soc11a5AjhI"><img src="https://i.ytimg.com/vi/soc11a5AjhI/mqdefault.jpg" alt="" loading="lazy"><span><small>16</small>final cut (side view)</span></button></li>
-        <li><button type="button" data-id="J70oPD4wZI4"><img src="https://i.ytimg.com/vi/J70oPD4wZI4/mqdefault.jpg" alt="" loading="lazy"><span><small>17</small>chiburi (side view)</span></button></li>
-        <li><button type="button" data-id="exRwGrW39ck"><img src="https://i.ytimg.com/vi/exRwGrW39ck/mqdefault.jpg" alt="" loading="lazy"><span><small>18</small>reverse hand position</span></button></li>
-        <li><button type="button" data-id="1qH5fjwRiIs"><img src="https://i.ytimg.com/vi/1qH5fjwRiIs/mqdefault.jpg" alt="" loading="lazy"><span><small>19</small>noto (side view)</span></button></li>
-        <li><button type="button" data-id="Q8oRtkcsr3o"><img src="https://i.ytimg.com/vi/Q8oRtkcsr3o/mqdefault.jpg" alt="" loading="lazy"><span><small>20</small>put sword in</span></button></li>
-        <li><button type="button" data-id="kdhUVr7-ENg"><img src="https://i.ytimg.com/vi/kdhUVr7-ENg/mqdefault.jpg" alt="" loading="lazy"><span><small>21</small>finish (side view)</span></button></li>
-        <li><button type="button" data-id="LvB4yYGF874"><img src="https://i.ytimg.com/vi/LvB4yYGF874/mqdefault.jpg" alt="" loading="lazy"><span><small>22</small>to seigan</span></button></li>
-      </ol>
-    </div>
-    <p class="note">¿No carga? Ábrela directamente en <a href="https://www.youtube.com/playlist?list=PLVLr8JOIOvLewgkL5da125Z0f-fJ20QkX" target="_blank" rel="noopener">YouTube</a>.</p>
-  </div>
-</section>
-
 <section id="curriculo" style="border-top:1px solid var(--line)">
   <div class="wrap">
     <p class="eyebrow">四 · Currículo</p>
@@ -675,21 +540,6 @@ footer a:hover{color:var(--beni)}
   </div>
 </footer>
 
-<script>
-(function(){
-  var L='PLVLr8JOIOvLewgkL5da125Z0f-fJ20QkX', yt=document.getElementById('yt'), list=document.getElementById('vlist');
-  var local=location.protocol==='file:';
-  if(local){ document.getElementById('localmsg').hidden=false; yt.remove(); }
-  list.addEventListener('click',function(e){
-    var b=e.target.closest('button[data-id]'); if(!b) return;
-    var id=b.getAttribute('data-id');
-    if(local){ window.open('https://www.youtube.com/watch?v='+id+'&list='+L,'_blank','noopener'); return; }
-    list.querySelectorAll('button.on').forEach(function(x){x.classList.remove('on')});
-    b.classList.add('on');
-    yt.src='https://www.youtube.com/embed/'+id+'?list='+L+'&rel=0&playsinline=1&autoplay=1';
-  });
-})();
-</script>
 <script>
 (function(){
   var box=document.getElementById('kamaeBox'), big=box.querySelector('img'), src=document.getElementById('kamaeImg');
